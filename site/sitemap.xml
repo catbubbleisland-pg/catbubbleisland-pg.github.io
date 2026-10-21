@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{SITE_URL}}/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/en/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/en/privacy/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/en/delete-account/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/en/support/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/en/terms/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/es/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/es/privacy/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/es/delete-account/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/es/support/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+  <url><loc>{{SITE_URL}}/es/terms/</loc><lastmod>{{BUILD_DATE}}</lastmod></url>
+</urlset>

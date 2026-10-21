@@ -1,0 +1,17 @@
+# app-ads.txt — PLANTILLA, NO PUBLICAR TAL CUAL.
+# Solo se publica si se copian lineas REALES a site-config.json -> optional.APP_ADS_TXT_LINES
+# (build.py genera entonces /app-ads.txt). No inventar IDs de vendedor.
+#
+# Formato de cada linea (IAB):  <dominio del sistema publicitario>, <ID de cuenta del editor>, <DIRECT|RESELLER>[, <ID de autoridad de certificacion>]
+#
+# De donde salen las lineas para la v1 (rewarded LevelPlay + red Unity Ads):
+#   - Panel de Unity LevelPlay / Unity Ads: seccion app-ads.txt de la cuenta -> copiar las lineas que entrega el panel.
+#   - NO agregar AdMob: el proyecto incluye el SDK de Google Mobile Ads solo por UMP (mensaje de consentimiento);
+#     AdMob no es una red de mediacion activa en v1. El APPLICATION_ID ca-app-pub-4940849784183229~... del manifest
+#     no autoriza a publicar una linea google.com sin que AdMob sirva anuncios.
+#
+# Ubicacion obligatoria: raiz del DOMINIO declarado como "sitio web del desarrollador" en Play
+# (https://<dominio>/app-ads.txt). En GitHub Pages de proyecto (usuario.github.io/repo/) NO queda en la raiz:
+# requiere dominio propio (CUSTOM_DOMAIN) o un sitio de usuario (repo <usuario>.github.io).
+#
+# <dominio-de-unity-ads>, <ID-editor-desde-el-panel>, DIRECT, <ID-certificacion-si-lo-indica-el-panel>

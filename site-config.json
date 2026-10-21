@@ -1,0 +1,114 @@
+{
+  "_doc": "Unica fuente de datos del sitio. build.py en modo estricto exige value no vacio y verified=true en cada entrada, y todos los release_checks en true. 'candidate' es solo una pista: NO se publica. Ver Web/README.md.",
+  "values": {
+    "SITE_URL": {
+      "value": "https://catbubbleisland-pg.github.io",
+      "verified": false,
+      "candidate": "https://catbubbleisland-pg.github.io (sitio de usuario de la cuenta GitHub del juego, D-10 revision 21/10/2026)",
+      "help": "URL base publica HTTPS, sin barra final. Debe coincidir con la URL real de GitHub Pages o con CUSTOM_DOMAIN.",
+      "review_note": "Marcar verified=true cuando el sitio responda por HTTPS en esa URL."
+    },
+    "PUBLISHER_NAME": {
+      "value": "CristianSC",
+      "verified": true,
+      "candidate": "Pawgames (marca en ProjectSettings.companyName; NO es nombre legal verificado)",
+      "help": "Nombre del desarrollador EXACTAMENTE como figura en la ficha/cuenta de Google Play (REL-08). Para cuenta personal suele ser el nombre de la persona o el nombre de desarrollador elegido.",
+      "review_note": "Nombre publico de desarrollador en Play Console (REL-08 T-04). Confirmado por el titular 21/10/2026."
+    },
+    "PUBLISHER_COUNTRY_EN": {
+      "value": "Argentina",
+      "verified": true,
+      "candidate": "(sin dato verificado; no asumir)",
+      "help": "Pais del titular de la cuenta de desarrollador, en ingles (ej. Argentina).",
+      "review_note": "Play Console: persona fisica, Argentina (REL-08 T-05). Confirmado por el titular 21/10/2026."
+    },
+    "PUBLISHER_COUNTRY_ES": {
+      "value": "Argentina",
+      "verified": true,
+      "candidate": "(sin dato verificado; no asumir)",
+      "help": "El mismo pais, en espanol.",
+      "review_note": "Play Console: persona fisica, Argentina (REL-08 T-05). Confirmado por el titular 21/10/2026."
+    },
+    "SUPPORT_EMAIL": {
+      "value": "catbubbleisland.help@gmail.com",
+      "verified": true,
+      "candidate": "catbubbleisland.help@gmail.com (D-01, 21/10/2026: buzon dedicado creado por el titular; ya cargado en Play Console y en SettingsPopup.prefab). Falta probar envio/recepcion para marcar verified:true.",
+      "help": "Buzon real, atendido y probado (enviar y recibir). Debe coincidir con el correo de contacto de la ficha de Play y con el prefab del juego.",
+      "review_note": "Buzon dedicado (D-01); envio y recepcion probados por el titular 21/10/2026."
+    },
+    "PRIVACY_EMAIL": {
+      "value": "catbubbleisland.help@gmail.com",
+      "verified": true,
+      "candidate": "= SUPPORT_EMAIL",
+      "help": "Correo para privacidad y solicitudes de eliminacion. Puede ser el mismo buzon de soporte.",
+      "review_note": "Buzon dedicado (D-01); envio y recepcion probados por el titular 21/10/2026."
+    },
+    "EFFECTIVE_DATE": {
+      "value": "2026-10-20",
+      "verified": false,
+      "candidate": "fecha real de publicacion de la politica (AAAA-MM-DD)",
+      "help": "Fecha de vigencia de la politica. Cambiarla cuando cambie el texto.",
+      "review_note": "Debe ser la fecha real de publicacion de la politica, no la de redaccion."
+    },
+    "POLICY_VERSION": {
+      "value": "1.0",
+      "verified": true,
+      "candidate": "1.0",
+      "help": "Version de la politica; debe coincidir con privacy_notice_version del juego si se usa.",
+      "review_note": "Primera publicacion."
+    },
+    "SUPPORT_RESPONSE_DAYS": {
+      "value": "15",
+      "verified": true,
+      "candidate": "7 (propuesta; confirmar capacidad del operador)",
+      "help": "Plazo habitual de respuesta de soporte que el titular puede cumplir.",
+      "review_note": "Titular pidio 15 dias en lugar de 7 por capacidad de una sola persona. Confirmado por el titular 21/10/2026."
+    },
+    "DELETION_ACK_DAYS": {
+      "value": "15",
+      "verified": true,
+      "candidate": "7 (propuesta REL-06 Retencion-y-borrado)",
+      "help": "Plazo de acuse de recibo de una solicitud web de eliminacion.",
+      "review_note": "Titular pidio 15 dias en lugar de 7 por capacidad de una sola persona. Confirmado por el titular 21/10/2026."
+    },
+    "DELETION_COMPLETE_DAYS": {
+      "value": "30",
+      "verified": true,
+      "candidate": "30 (decision del orquestador: <=30 dias via Unity Dashboard)",
+      "help": "Plazo maximo para completar una solicitud web tras verificar titularidad. build.py rechaza >30.",
+      "review_note": "Decidido D-13 (<=30 dias)."
+    },
+    "CASE_RECORD_RETENTION_DAYS": {
+      "value": "90",
+      "verified": true,
+      "candidate": "90 (propuesta REL-06)",
+      "help": "Dias que se conserva el registro minimo del caso de eliminacion tras cerrarlo.",
+      "review_note": "Propuesta REL-06 (90) aceptada. Confirmado por el titular 21/10/2026."
+    },
+    "SUPPORT_RETENTION_DAYS": {
+      "value": "90",
+      "verified": true,
+      "candidate": "90 (propuesta REL-06; requiere poder purgar el buzon)",
+      "help": "Dias que se conservan los correos de soporte tras resolver la consulta.",
+      "review_note": "Propuesta REL-06 (90) aceptada. Confirmado por el titular 21/10/2026."
+    }
+  },
+  "optional": {
+    "_doc": "Opcionales: vacios no rompen el build.",
+    "PLAY_STORE_URL": "",
+    "CUSTOM_DOMAIN": "",
+    "APP_ADS_TXT_LINES": []
+  },
+  "release_checks": {
+    "_doc": "Confirmar contra la candidata (RC) instalada desde Play. Todos deben ser true para publicar. TERMS_LEGAL_REVIEW_DONE: los Terminos (/terms) incluyen ley aplicable y jurisdiccion; requieren revision legal o retirar la pagina.",
+    "SUPPORT_MAILBOX_TESTED": true,
+    "WEB_DELETION_PROCESS_OPERATIONAL": false,
+    "IN_APP_PATHS_MATCH_RC": false,
+    "NO_PUSH_AND_NO_FIREBASE_ANALYTICS_IN_RC": false,
+    "ADS_REWARDED_ONLY_NON_PERSONALIZED_IN_RC": false,
+    "OPTIONAL_CHOICES_DEFAULT_OFF_IN_RC": false,
+    "CRASHLYTICS_WITHOUT_PLAYER_ID_IN_RC": false,
+    "LEVELS_54_ISLANDS_4_IN_RC": false,
+    "TERMS_LEGAL_REVIEW_DONE": false
+  }
+}
