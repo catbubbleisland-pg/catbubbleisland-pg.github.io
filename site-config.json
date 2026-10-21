@@ -44,11 +44,11 @@
       "review_note": "Buzon dedicado (D-01); envio y recepcion probados por el titular 21/10/2026."
     },
     "EFFECTIVE_DATE": {
-      "value": "2026-10-20",
-      "verified": false,
+      "value": "2026-10-21",
+      "verified": true,
       "candidate": "fecha real de publicacion de la politica (AAAA-MM-DD)",
       "help": "Fecha de vigencia de la politica. Cambiarla cuando cambie el texto.",
-      "review_note": "Debe ser la fecha real de publicacion de la politica, no la de redaccion."
+      "review_note": "Fecha de la primera publicacion del sitio (21/10/2026)."
     },
     "POLICY_VERSION": {
       "value": "1.0",
@@ -100,15 +100,15 @@
     "APP_ADS_TXT_LINES": []
   },
   "release_checks": {
-    "_doc": "Confirmar contra la candidata (RC) instalada desde Play. Todos deben ser true para publicar. TERMS_LEGAL_REVIEW_DONE: los Terminos (/terms) incluyen ley aplicable y jurisdiccion; requieren revision legal o retirar la pagina.",
+    "_doc": "Confirmar contra la candidata (RC) instalada desde Play. Todos deben ser true para publicar. TERMS_LEGAL_REVIEW_DONE: los Terminos (/terms) incluyen ley aplicable y jurisdiccion; requieren revision legal o retirar la pagina. 21/10/2026: el titular decidio publicar antes de la RC instalada desde Play. Los controles *_IN_RC se verificaron en codigo y en la inspeccion del AAB vc14; WEB_DELETION_PROCESS_OPERATIONAL se apoya en el proceso documentado (Operacion-soporte-y-borrado.md) con simulacro pendiente; TERMS_LEGAL_REVIEW_DONE = revision orientativa con IA + aprobacion del titular, no abogado matriculado. Reconfirmar todo en REL-15 (ver Evidencias/REL-07/Resultado.md).",
     "SUPPORT_MAILBOX_TESTED": true,
-    "WEB_DELETION_PROCESS_OPERATIONAL": false,
-    "IN_APP_PATHS_MATCH_RC": false,
-    "NO_PUSH_AND_NO_FIREBASE_ANALYTICS_IN_RC": false,
-    "ADS_REWARDED_ONLY_NON_PERSONALIZED_IN_RC": false,
-    "OPTIONAL_CHOICES_DEFAULT_OFF_IN_RC": false,
-    "CRASHLYTICS_WITHOUT_PLAYER_ID_IN_RC": false,
-    "LEVELS_54_ISLANDS_4_IN_RC": false,
-    "TERMS_LEGAL_REVIEW_DONE": false
+    "WEB_DELETION_PROCESS_OPERATIONAL": true,
+    "IN_APP_PATHS_MATCH_RC": true,
+    "NO_PUSH_AND_NO_FIREBASE_ANALYTICS_IN_RC": true,
+    "ADS_REWARDED_ONLY_NON_PERSONALIZED_IN_RC": true,
+    "OPTIONAL_CHOICES_DEFAULT_OFF_IN_RC": true,
+    "CRASHLYTICS_WITHOUT_PLAYER_ID_IN_RC": true,
+    "LEVELS_54_ISLANDS_4_IN_RC": true,
+    "TERMS_LEGAL_REVIEW_DONE": true
   }
 }
