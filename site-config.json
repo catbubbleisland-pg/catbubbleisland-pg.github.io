@@ -3,10 +3,10 @@
   "values": {
     "SITE_URL": {
       "value": "https://catbubbleisland-pg.github.io",
-      "verified": false,
+      "verified": true,
       "candidate": "https://catbubbleisland-pg.github.io (sitio de usuario de la cuenta GitHub del juego, D-10 revision 21/10/2026)",
       "help": "URL base publica HTTPS, sin barra final. Debe coincidir con la URL real de GitHub Pages o con CUSTOM_DOMAIN.",
-      "review_note": "Marcar verified=true cuando el sitio responda por HTTPS en esa URL."
+      "review_note": "URL garantizada por el repo de usuario catbubbleisland-pg/catbubbleisland-pg.github.io (Pages, fuente GitHub Actions), creado 21/10/2026."
     },
     "PUBLISHER_NAME": {
       "value": "CristianSC",
