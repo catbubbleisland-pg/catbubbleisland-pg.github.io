@@ -62,6 +62,9 @@ def load_config(path, preview):
     psu = opt.get("PLAY_STORE_URL", "").strip()
     if psu and not psu.startswith("https://play.google.com/store/apps/details?id=com.pawgames.catbubbleisland"):
         errors.append("optional.PLAY_STORE_URL debe ser la ficha publica de com.pawgames.catbubbleisland")
+    tgu = opt.get("TESTERS_GROUP_URL", "").strip()
+    if tgu and not re.match(r"^https://groups\.google\.com/g/[A-Za-z0-9._-]+$", tgu):
+        errors.append("optional.TESTERS_GROUP_URL debe ser https://groups.google.com/g/<nombre>")
     if errors and not preview:
         fail(errors)
     for e in errors:
@@ -73,6 +76,7 @@ def load_config(path, preview):
     values["BUILD_DATE"] = today.isoformat()
     values["YEAR"] = str(today.year)
     values["PLAY_STORE_URL"] = psu
+    values["TESTERS_GROUP_URL"] = tgu
     return cfg, values, opt
 
 def apply_conditionals(text, flags):
@@ -83,7 +87,8 @@ def apply_conditionals(text, flags):
     return pat.sub(repl, text)
 
 def render(text, values, preview, rel):
-    text = apply_conditionals(text, {"PLAY_STORE_URL": bool(values.get("PLAY_STORE_URL"))})
+    text = apply_conditionals(text, {"PLAY_STORE_URL": bool(values.get("PLAY_STORE_URL")),
+                                     "TESTERS_GROUP_URL": bool(values.get("TESTERS_GROUP_URL"))})
     def sub(m):
         k = m.group(1)
         v = values.get(k, "")
