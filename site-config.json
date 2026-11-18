@@ -96,7 +96,7 @@
   "optional": {
     "_doc": "Opcionales: vacios no rompen el build.",
     "PLAY_STORE_URL": "",
-    "TESTERS_GROUP_URL": "",
+    "TESTERS_GROUP_URL": "https://groups.google.com/g/catbubbleisland-testers",
     "CUSTOM_DOMAIN": "",
     "APP_ADS_TXT_LINES": [
       "OWNERDOMAIN=catbubbleisland-pg.github.io",
